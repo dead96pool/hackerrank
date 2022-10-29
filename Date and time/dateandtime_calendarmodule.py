@@ -13,6 +13,8 @@ Sample Code
 >>> print calendar.TextCalendar(firstweekday=6).formatyear(2015)
                                   2015
 
+
+
       January                   February                   March
 Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa
              1  2  3       1  2  3  4  5  6  7       1  2  3  4  5  6  7
