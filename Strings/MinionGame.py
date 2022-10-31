@@ -52,11 +52,19 @@ Note : Vowels are only defined as "AEIOU". In this problem,  is not considered a
 
 def minion_game(string):
     kevin, stuart = 0, 0
-    for i in range(len(string)):
+    length = len(string)
+    for i in range(length):
         if string[i] in 'AEIOU':
-            print(string[i])
-
-
+            kevin += length - i
+        else:
+            stuart += length - i
+        
+    if kevin > stuart:
+        print("Kevin {}".format(kevin))
+    elif stuart > kevin:
+        print("Stuart {}".format(stuart))
+    else:
+        print("Draw")
 
 if __name__ == '__main__':
     s = input()
