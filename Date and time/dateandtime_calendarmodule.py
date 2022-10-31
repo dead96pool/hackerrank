@@ -72,9 +72,10 @@ Explanation
 The day on August 5th 2015 was WEDNESDAY.
 
 """
-
+import calendar
 s = input()
 
-month, date, year = s.split()
+mm, dd, yyyy = map(int, s.split())
+day = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
 
-print("date:{} Month:{} Year:{}".format(date,month,year))
+print(day[calendar.weekday(yyyy,mm, dd)])
