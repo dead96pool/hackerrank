@@ -40,5 +40,34 @@ Similarly, in the second query, time difference is 5 hours and 30 minutes for ti
 a difference of 1 day and 30 minutes. Or 24 x 3600 + 30 x 60 = 88200
 
 """
+import math
+import os
+import random
+import re
+import sys
+from datetime import datetime
 
-t = int(input())
+# Complete the time_delta function below.
+def time_delta(t1, t2):
+    time_format = '%a %d %b %Y %H:%M:%S %z'
+    
+    t1 = datetime.strptime(t1,time_format)
+    t2 = datetime.strptime(t2,time_format)
+    
+    return int(abs((t1-t2).total_seconds()))
+    
+
+if __name__ == '__main__':
+    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for _ in range(t):
+        t1 = input()
+        t2 = input()
+
+        delta = time_delta(t1, t2)
+        print(delta)
+        #fptr.write(delta + '\n')
+
+    #fptr.close()
