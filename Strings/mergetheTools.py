@@ -66,6 +66,7 @@ import textwrap
 
 def merge_the_tools(string, k):
     # your code goes here
+    
     lis = textwrap.wrap(string,k)
     for item in lis:
         s = ""
@@ -73,7 +74,7 @@ def merge_the_tools(string, k):
             if char not in s:
                 s += char
         print(s)
-        
+     
 
 if __name__ == '__main__':
     string, k = input(), int(input())
