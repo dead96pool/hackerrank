@@ -48,6 +48,8 @@ array = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
+
+# !!!!!!!!!!!!!!!!!reduce time
 for val in array:
     if val in A:
         happy += 1
