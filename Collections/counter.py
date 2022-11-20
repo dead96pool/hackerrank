@@ -76,7 +76,7 @@ shoe = Counter(list(map(int,input().split(" "))))
 
 customer_count = int(input())
 
-for i in range(1,customer_count+1):
+for _ in range(customer_count):
     size, price = map(int,input().split())
 
     if shoe[size] > 0:
