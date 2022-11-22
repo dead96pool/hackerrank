@@ -39,21 +39,20 @@ happy = 0
 
 #n is the count of input array
 #m is the count of both disjoint sets A and B
-n, m = map(int, input().split())
+n, m = input().split()
 
 #taking input array as list
-array = list(map(int, input().split()))
+array = list(input().split())
 
 # A and B sets 
-A = list(map(int, input().split()))
-B = list(map(int, input().split()))
+A = set(input().split())
+B = set(input().split())
 
 
-# !!!!!!!!!!!!!!!!!reduce time
 for val in array:
     if val in A:
         happy += 1
-    elif val in B:
+    if val in B:
         happy -= 1
 
 print(happy)
