@@ -33,9 +33,7 @@ Also, note the single space within each compression and between the compressions
 
 import itertools
 
-
-#inputstr = str(input())
-inputstr = "1222311"
+inputstr = str(input())
 x = itertools.groupby(inputstr)
 
 for k,g in x:
