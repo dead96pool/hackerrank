@@ -17,29 +17,30 @@ def next_move(posr, posc, board):
             if char == "d":
                 pos_dirty.append((idx,idy))
             
-    print(pos_dirty)
+    #print(pos_dirty)
 
     for x,y in pos_dirty:
         abs_dist[x,y] = abs_distance((posr,posc),(x,y))
 
     abs_dist = dict(sorted(abs_dist.items(), key = lambda item: item[1]))
-    print(abs_dist)
+    #print(abs_dist)
 
     distance = list(abs_dist.keys())
-    print(distance)
+    #print(distance)
 
     difference_r = distance[0][0] - posr
     difference_c = distance[0][1] - posc
 
-    print(difference_r,difference_c)
+    #print(difference_r,difference_c)
     if difference_r == difference_c == 0:
         move = "CLEAN"
     elif abs(difference_r) < abs(difference_c):
         move = move = "".join(["RIGHT" if difference_c > 0 else "LEFT"])
     else:
-        move = "".join(["DOWN" if difference_r > 0 else "UP"])
-                    
+        move = "".join(["DOWN" if difference_r > 0 else "UP"])               
+    
     print(move)
+
 # Tail starts here
 
 if __name__ == "__main__":
