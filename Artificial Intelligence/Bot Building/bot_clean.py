@@ -1,10 +1,8 @@
 """
 Bot Clean
-
 link: https://www.hackerrank.com/challenges/botclean?isFullScreen=true&hr_b=1
 
 """
-
 #!/usr/bin/python
 import math
 # Head ends here
@@ -42,8 +40,6 @@ def next_move(posr, posc, board):
         move = "".join(["DOWN" if difference_r > 0 else "UP"])
                     
     print(move)
-
-
 # Tail starts here
 
 if __name__ == "__main__":
