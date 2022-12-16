@@ -26,7 +26,6 @@ def nextMove(n,r,c,grid):
     else:
         move = "".join(["UP\n" if row < 0 else "DOWN\n"])
 
-
     return move
 
 n = int(input())
