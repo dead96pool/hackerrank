@@ -28,31 +28,30 @@ import sys
 """
 def minimumBribes(q):
     # Write your code here
-    total_count = 0
-    for i in range(len(q)-1,0,-1):
-        count = 0
-        for j in range(i):
-            if q[j]>q[j+1]:
-                count += 1
-                total_count += 1
-                q[j], q[j+1] = q[j+1], q[j]
+    bribe = 0
+
+    for i in range(len(q)):
+        high = q.index(max(q))
+        print("high:%d"%q[high])
+
+        while q[high] < q[high+1]:
+            bribe += 1
+            q[high],q[high+1] = q[high+1], q[high]
             print(q)
+        if bribe > 2:
+            print("Too chaotic")
+            return
 
-        if count > 2:
-            print("Too Chaotic")
-            break
+    print(bribe) 
 
-    print(total_count)
-
-
+        
 
 
 if __name__ == '__main__':
-    t = int(input().strip())
+    #t = int(input().strip())
 
-    for t_itr in range(t):
-        n = int(input().strip())
+    #for t_itr in range(t):
+        #n = int(input().strip())
+    q = list(map(int, input().rstrip().split()))
 
-        q = list(map(int, input().rstrip().split()))
-
-        minimumBribes(q)
+    minimumBribes(q)
