@@ -49,13 +49,11 @@ HK
 
 from itertools import combinations
 
-s ,k = input().split()
+s, k = input().split()
 k = int(k)
+s = sorted(s)
 
-#print(list(combinations(s,0)))
+for len in range(1,k+1):
 
-for i in range(1,k+1):
-    #result = sorted(list(combinations(s,i)), key = lambda x : x[0:])
-    for item in sorted(combinations(s,i), key = lambda x : x[0:]):
+    for item in combinations(s, len):
         print("".join(item))
-
